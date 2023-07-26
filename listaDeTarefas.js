@@ -1,10 +1,19 @@
+const criarTarefa = (evento) => {
+    
+    evento.preventDefault();
+    
+    const input = document.querySelector('[data-form-input]');
+    const valor = input.value;
+    console.log(valor);
+
+    const tarefa = document.querySelector('[data-task]');
+    const conteudo = `<p class="content">${valor}</p>`; //template String
+
+    tarefa.innerHTML = conteudo;
+
+    input.value = " ";
+} 
+
 const novaTarefa = document.querySelector('[data-form-button]');
 
-//novaTarefa é o elemento
-//addEventListener é o cara que fica pra "escutar" o evento
-//click é o tipo de evento
-//() => {} função anonima
-novaTarefa.addEventListener('click', () => {
-    console.log('fui clicado');
-});
-//Ou seja, quando o evento acontecer, a função será executada e vai exibir "fui clicado"
+novaTarefa.addEventListener('click', criarTarefa);
