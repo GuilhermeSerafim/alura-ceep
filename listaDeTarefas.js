@@ -1,3 +1,5 @@
+(() => {
+
 const criarTarefa = (evento) => {
     
     evento.preventDefault();
@@ -45,3 +47,5 @@ const concluirTarefa = (evento) => {
     tarefaCompleta.classList.toggle('done'); //vai executar essa classe css, a partir do momento
     // em que eu clicar no botão | O metodo toggle devolve um booleano
 };
+
+})()
